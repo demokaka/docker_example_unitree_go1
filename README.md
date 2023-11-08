@@ -27,7 +27,7 @@ sudo chmod +x run_docker.sh
 ```
 
 # Start simulation with Gazebo and rviz
-Follow this [resource](https://github.com/macc-n/ros_unitree) for all the simulation
+Follow this [resource](https://github.com/macc-n/ros_unitree) for all the simulations
 
 # Using docker
 - To enter an **already running container** run,
