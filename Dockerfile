@@ -51,12 +51,6 @@ RUN source /ros_entrypoint.sh \
 
     && sed -i 's|home/unitree/catkin_ws|home/catkin_ws|' ./ros_unitree/unitree_ros/unitree_gazebo/worlds/stairs.world \
 
-#    && filename="./ros_unitree/unitree_ros/unitree_gazebo/worlds/stairs.world" \
-
-#    && search="home/unitree/catkin_ws" && replace="home/catkin_ws" \
-
-#    && sed -i "s/$search/$replace/" $filename \
-
     && cd ~/catkin_ws && catkin_make
 
     
