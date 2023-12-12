@@ -2,17 +2,6 @@ FROM osrf/ros:noetic-desktop-full
 
 
 
-# nvidia-container-runtime
-
-ENV NVIDIA_VISIBLE_DEVICES \
-
-    ${NVIDIA_VISIBLE_DEVICES:-all}
-
-ENV NVIDIA_DRIVER_CAPABILITIES \
-
-    ${NVIDIA_DRIVER_CAPABILITIES:+$NVIDIA_DRIVER_CAPABILITIES,}graphics
-
-
 
 SHELL [ "/bin/bash" , "-c" ]
 
@@ -61,12 +50,6 @@ RUN source /ros_entrypoint.sh \
     && git clone https://github.com/macc-n/ros_unitree \
 
     && sed -i 's|home/unitree/catkin_ws|home/catkin_ws|' ./ros_unitree/unitree_ros/unitree_gazebo/worlds/stairs.world \
-
-#    && filename="./ros_unitree/unitree_ros/unitree_gazebo/worlds/stairs.world" \
-
-#    && search="home/unitree/catkin_ws" && replace="home/catkin_ws" \
-
-#    && sed -i "s/$search/$replace/" $filename \
 
     && cd ~/catkin_ws && catkin_make
 
